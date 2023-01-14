@@ -8,6 +8,7 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 {
     [SerializeField] TMP_InputField roomName;
     [SerializeField] TMP_Text errorText;
+    [SerializeField] TMP_Text roomNameText;
 
     public void Start()
     {
@@ -33,17 +34,29 @@ public class NetworkManager: MonoBehaviourPunCallbacks
             return;
 
         PhotonNetwork.CreateRoom(roomName.text);
-        ScreenManager.Instance.DisplayScreen("Main");
+        ScreenManager.Instance.DisplayScreen("Loading");
     }
 
     public override void OnJoinedRoom()
     {
         ScreenManager.Instance.DisplayScreen("Room");
+        roomNameText.text = PhotonNetwork.CurrentRoom.Name;
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         errorText.text = "Room Creation Failed: " + errorText;
         ScreenManager.Instance.DisplayScreen("Error");
+    }
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+        ScreenManager.Instance.DisplayScreen("Loading");
+    }
+
+    public override void OnLeftRoom()
+    {
+        ScreenManager.Instance.DisplayScreen("Main");
     }
 }
