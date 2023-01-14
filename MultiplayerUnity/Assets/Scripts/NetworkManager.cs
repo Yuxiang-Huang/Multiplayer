@@ -19,6 +19,7 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
+        ScreenManager.Instance.DisplayScreen("Main");
         Debug.Log("Joined Lobby");
     }
 
