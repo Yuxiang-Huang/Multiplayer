@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using Photon.Realtime;
 
 public class NetworkManager: MonoBehaviourPunCallbacks
 {
+    public static NetworkManager instance;
+
     [SerializeField] TMP_InputField roomName;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
+    [SerializeField] Transform roomListContent;
+    [SerializeField] GameObject roomListPrefab;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     public void Start()
     {
@@ -37,16 +47,22 @@ public class NetworkManager: MonoBehaviourPunCallbacks
         ScreenManager.Instance.DisplayScreen("Loading");
     }
 
-    public override void OnJoinedRoom()
-    {
-        ScreenManager.Instance.DisplayScreen("Room");
-        roomNameText.text = PhotonNetwork.CurrentRoom.Name;
-    }
-
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         errorText.text = "Room Creation Failed: " + errorText;
         ScreenManager.Instance.DisplayScreen("Error");
+    }
+
+    public void JoinRoom(RoomInfo info)
+    {
+        PhotonNetwork.JoinRoom(info.Name);
+        ScreenManager.Instance.DisplayScreen("Loading");
+    }
+
+    public override void OnJoinedRoom()
+    {
+        ScreenManager.Instance.DisplayScreen("Room");
+        roomNameText.text = PhotonNetwork.CurrentRoom.Name;
     }
 
     public void LeaveRoom()
@@ -58,5 +74,21 @@ public class NetworkManager: MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         ScreenManager.Instance.DisplayScreen("Main");
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        //clear list
+        foreach (Transform transform in roomListContent)
+        {
+            Destroy(transform.gameObject);
+        }
+
+        //make room
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            Instantiate(roomListPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+        }
+
     }
 }
