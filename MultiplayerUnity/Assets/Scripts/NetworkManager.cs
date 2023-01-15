@@ -15,6 +15,9 @@ public class NetworkManager: MonoBehaviourPunCallbacks
     [SerializeField] Transform roomListContent;
     [SerializeField] GameObject roomListPrefab;
 
+    [SerializeField] Transform playerListContent;
+    [SerializeField] GameObject playerListPrefab;
+
     void Awake()
     {
         instance = this;
@@ -36,6 +39,7 @@ public class NetworkManager: MonoBehaviourPunCallbacks
     {
         ScreenManager.Instance.DisplayScreen("Main");
         Debug.Log("Joined Lobby");
+        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000");
     }
 
     public void CreateRoom()
@@ -63,6 +67,15 @@ public class NetworkManager: MonoBehaviourPunCallbacks
     {
         ScreenManager.Instance.DisplayScreen("Room");
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
+
+        //create players
+        Player[] players = PhotonNetwork.PlayerList;
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            Instantiate(playerListPrefab, playerListContent)
+            .GetComponent<PlayerListItem>().SetUp(players[i]);
+        }
     }
 
     public void LeaveRoom()
@@ -89,6 +102,11 @@ public class NetworkManager: MonoBehaviourPunCallbacks
         {
             Instantiate(roomListPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
         }
+    }
 
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Instantiate(playerListPrefab, playerListContent)
+            .GetComponent<PlayerListItem>().SetUp(newPlayer);
     }
 }
