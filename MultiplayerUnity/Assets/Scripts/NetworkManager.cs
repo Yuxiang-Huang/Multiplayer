@@ -20,6 +20,8 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 
     [SerializeField] GameObject startGameButton;
 
+    [SerializeField] TMP_InputField playerName;
+
     void Awake()
     {
         instance = this;
@@ -42,7 +44,6 @@ public class NetworkManager: MonoBehaviourPunCallbacks
     {
         ScreenManager.Instance.DisplayScreen("Main");
         Debug.Log("Joined Lobby");
-        PhotonNetwork.NickName = "Player " + Random.Range(0, 1000).ToString("0000");
     }
 
     public void CreateRoom()
