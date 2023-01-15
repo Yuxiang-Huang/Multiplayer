@@ -7,7 +7,7 @@ using Photon.Realtime;
 
 public class NetworkManager: MonoBehaviourPunCallbacks
 {
-    public static NetworkManager instance;
+    public static NetworkManager Instance;
 
     [SerializeField] TMP_InputField roomName;
     [SerializeField] TMP_Text errorText;
@@ -24,7 +24,7 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     public void Start()
