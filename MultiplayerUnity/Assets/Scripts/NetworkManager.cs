@@ -71,6 +71,12 @@ public class NetworkManager: MonoBehaviourPunCallbacks
         ScreenManager.Instance.DisplayScreen("Room");
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
+        //clear player list
+        foreach (Transform child in playerListContent)
+        {
+            Destroy(child.gameObject);
+        }
+
         //create players
         Player[] players = PhotonNetwork.PlayerList;
 
@@ -112,7 +118,10 @@ public class NetworkManager: MonoBehaviourPunCallbacks
         //make room
         for (int i = 0; i < roomList.Count; i++)
         {
-            Instantiate(roomListPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+            if (! roomList[i].RemovedFromList)
+            {
+                Instantiate(roomListPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+            }
         }
     }
 

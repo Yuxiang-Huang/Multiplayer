@@ -15,7 +15,7 @@ public class ScreenManager : MonoBehaviour
         {
             if (screens[i].screenName == "Loading")
             {
-                DisplayScreen(screens[i]);
+                screens[i].Display();
             }
             else
             {
