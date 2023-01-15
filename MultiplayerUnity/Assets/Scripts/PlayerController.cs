@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         cardNum = 5;
 
-        playerName.text = PhotonNetwork.NickName;
-
         createList();
         generatePhrase();
     }
@@ -116,12 +114,13 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         phrase = allPhrases[Random.Range(0, allPhrases.Count)];
 
-        PV.RPC("updatePhrase", RpcTarget.AllBuffered, cardNum, phrase);
+        PV.RPC("updatePhrase", RpcTarget.AllBuffered, PhotonNetwork.NickName, cardNum, phrase);
     }
 
     [PunRPC]
-    void updatePhrase(int number, string phrase)
+    void updatePhrase(string name, int number, string phrase)
     {
+        playerName.text = name;
         displayCard.text = "Cards Left: " + number;
         displayPhrase.text = phrase;
 
