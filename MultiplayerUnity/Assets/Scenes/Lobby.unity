@@ -2141,7 +2141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76de8db3931434119bc614866ba95d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: {fileID: 1410631294}
+  roomNameInput: {fileID: 1410631294}
   errorText: {fileID: 1223702089}
   roomNameText: {fileID: 2088358363}
   roomListContent: {fileID: 948636600}
@@ -2149,7 +2149,6 @@ MonoBehaviour:
   playerListContent: {fileID: 795935722}
   playerListPrefab: {fileID: 1060667780782813418, guid: f044ad5bb65b947649ae1cb563d68238, type: 3}
   startGameButton: {fileID: 1462326204}
-  playerName: {fileID: 1460556296}
 --- !u!4 &1145162557
 Transform:
   m_ObjectHideFlags: 0

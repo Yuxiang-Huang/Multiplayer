@@ -9,7 +9,7 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 {
     public static NetworkManager Instance;
 
-    [SerializeField] TMP_InputField roomName;
+    [SerializeField] TMP_InputField roomNameInput;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
     [SerializeField] Transform roomListContent;
@@ -20,11 +20,11 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 
     [SerializeField] GameObject startGameButton;
 
-    [SerializeField] TMP_InputField playerName;
-
     void Awake()
     {
         Instance = this;
+
+        roomNameInput.text = "Room " + Random.Range(0, 1000).ToString("0000");
     }
 
     public void Start()
@@ -48,10 +48,10 @@ public class NetworkManager: MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        if (string.IsNullOrEmpty(roomName.text))
+        if (string.IsNullOrEmpty(roomNameInput.text))
             return;
 
-        PhotonNetwork.CreateRoom(roomName.text);
+        PhotonNetwork.CreateRoom(roomNameInput.text);
         ScreenManager.Instance.DisplayScreen("Loading");
     }
 
