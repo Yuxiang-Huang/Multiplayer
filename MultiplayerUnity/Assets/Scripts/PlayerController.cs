@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public TextMeshProUGUI displayCard;
     public TextMeshProUGUI displayPhrase;
 
+    public TextMeshProUGUI revealMessageText;
+
     void Awake()
     {
         PV = GetComponent<PhotonView>();
@@ -118,6 +120,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
         loseCard.gameObject.SetActive(true);
         displayPhrase.gameObject.SetActive(true);
         revealBtn.gameObject.SetActive(false);
+
+        PV.RPC("displayRevealMessage", RpcTarget.AllBuffered, PhotonNetwork.NickName + " revealed the card.");
     }
 
     public void win()
@@ -167,6 +171,22 @@ public class PlayerController : MonoBehaviourPunCallbacks
             revealBtn.gameObject.SetActive(false);
             displayPhrase.gameObject.SetActive(true);
         }
+    }
+
+    [PunRPC]
+    void displayRevealMessage(string text)
+    {
+        revealMessageText.text = text;
+        StartCoroutine("CountDownReveal");
+    }
+
+    IEnumerator CountDownReveal()
+    {
+        revealMessageText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(3);
+
+        revealMessageText.gameObject.SetActive(false);
     }
 }
 
