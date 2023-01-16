@@ -23,13 +23,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
     public TextMeshProUGUI displayCard;
     public TextMeshProUGUI displayPhrase;
 
-    public TextMeshProUGUI revealMessageText;
-
     void Awake()
     {
         PV = GetComponent<PhotonView>();
 
-        transform.SetParent(GameObject.Find("Canvas").transform);
+        transform.SetParent(GameObject.Find("PlayerCanvas").transform);
 
         transform.localScale = new Vector3(1, 1, 1);
 
@@ -176,17 +174,17 @@ public class PlayerController : MonoBehaviourPunCallbacks
     [PunRPC]
     void displayRevealMessage(string text)
     {
-        revealMessageText.text = text;
+        RevealText.Instance.text.text = text;
         StartCoroutine("CountDownReveal");
     }
 
     IEnumerator CountDownReveal()
     {
-        revealMessageText.gameObject.SetActive(true);
+        RevealText.Instance.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(3);
 
-        revealMessageText.gameObject.SetActive(false);
+        RevealText.Instance.gameObject.SetActive(false);
     }
 }
 
