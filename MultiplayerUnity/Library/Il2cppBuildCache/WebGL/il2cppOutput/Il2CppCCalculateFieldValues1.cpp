@@ -28606,8 +28606,8 @@ public:
 struct NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606  : public MonoBehaviourPunCallbacks_tCA6BC48EAA44CF0A1F198DC7E79CD9E8B069E26C
 {
 public:
-	// TMPro.TMP_InputField NetworkManager::roomName
-	TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * ___roomName_6;
+	// TMPro.TMP_InputField NetworkManager::roomNameInput
+	TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * ___roomNameInput_6;
 	// TMPro.TMP_Text NetworkManager::errorText
 	TMP_Text_t86179C97C713E1A6B3751B48DC7A16C874A7B262 * ___errorText_7;
 	// TMPro.TMP_Text NetworkManager::roomNameText
@@ -28622,17 +28622,15 @@ public:
 	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___playerListPrefab_12;
 	// UnityEngine.GameObject NetworkManager::startGameButton
 	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___startGameButton_13;
-	// TMPro.TMP_InputField NetworkManager::playerName
-	TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * ___playerName_14;
 
 public:
-	inline static int32_t get_offset_of_roomName_6() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___roomName_6)); }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * get_roomName_6() const { return ___roomName_6; }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 ** get_address_of_roomName_6() { return &___roomName_6; }
-	inline void set_roomName_6(TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * value)
+	inline static int32_t get_offset_of_roomNameInput_6() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___roomNameInput_6)); }
+	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * get_roomNameInput_6() const { return ___roomNameInput_6; }
+	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 ** get_address_of_roomNameInput_6() { return &___roomNameInput_6; }
+	inline void set_roomNameInput_6(TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * value)
 	{
-		___roomName_6 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___roomName_6), (void*)value);
+		___roomNameInput_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___roomNameInput_6), (void*)value);
 	}
 
 	inline static int32_t get_offset_of_errorText_7() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___errorText_7)); }
@@ -28696,15 +28694,6 @@ public:
 	{
 		___startGameButton_13 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___startGameButton_13), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_playerName_14() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___playerName_14)); }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * get_playerName_14() const { return ___playerName_14; }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 ** get_address_of_playerName_14() { return &___playerName_14; }
-	inline void set_playerName_14(TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * value)
-	{
-		___playerName_14 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___playerName_14), (void*)value);
 	}
 };
 
@@ -39330,10 +39319,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3879[3] =
 	U3CPrivateImplementationDetailsU3E_t7FD38F8E82C192AC50B85B9ED26CDB7AC898E07E_StaticFields::get_offset_of_U33BB048C6BCFB13ADB4230B15FDE86F7FCFA341C302CC263DFC9250D7877BABFB_1(),
 	U3CPrivateImplementationDetailsU3E_t7FD38F8E82C192AC50B85B9ED26CDB7AC898E07E_StaticFields::get_offset_of_U37E8D5B72D290BA59F0EDBE3D6F961EEA1A534C250A6EF2CAC5B85C0C2111735F_2(),
 };
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3881[10] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3881[9] = 
 {
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606_StaticFields::get_offset_of_Instance_5(),
-	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_roomName_6(),
+	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_roomNameInput_6(),
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_errorText_7(),
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_roomNameText_8(),
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_roomListContent_9(),
@@ -39341,7 +39330,6 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3881[10] =
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_playerListContent_11(),
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_playerListPrefab_12(),
 	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_startGameButton_13(),
-	NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606::get_offset_of_playerName_14(),
 };
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3882[10] = 
 {

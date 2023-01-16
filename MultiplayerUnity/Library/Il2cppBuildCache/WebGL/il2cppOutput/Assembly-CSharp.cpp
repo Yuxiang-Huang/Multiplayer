@@ -450,6 +450,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral388BA32B085D127EBFAFAE736296E46A0DD52F0A
 IL2CPP_EXTERN_C String_t* _stringLiteral3F86111F44D66C543B732847E04E3C2A5B38BB3D;
 IL2CPP_EXTERN_C String_t* _stringLiteral424358404F7819E3EC1C5D4643DAF51E89651122;
 IL2CPP_EXTERN_C String_t* _stringLiteral4B6F259D090A7AB0D2DC04B00C4CAA926D17DD6D;
+IL2CPP_EXTERN_C String_t* _stringLiteral51A1C48183DC1FF2764D136B88FA5A34AA6B1410;
 IL2CPP_EXTERN_C String_t* _stringLiteral56D7741BCA89552362FD24D11BB8980E3D8A444C;
 IL2CPP_EXTERN_C String_t* _stringLiteral57181476910FA4C16EFCC0E7443CD9C417D2514B;
 IL2CPP_EXTERN_C String_t* _stringLiteral57B2D1B5513A2CADA6F1D929E54C7A2B48A8FE30;
@@ -8548,8 +8549,8 @@ public:
 struct NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606  : public MonoBehaviourPunCallbacks_tCA6BC48EAA44CF0A1F198DC7E79CD9E8B069E26C
 {
 public:
-	// TMPro.TMP_InputField NetworkManager::roomName
-	TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * ___roomName_6;
+	// TMPro.TMP_InputField NetworkManager::roomNameInput
+	TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * ___roomNameInput_6;
 	// TMPro.TMP_Text NetworkManager::errorText
 	TMP_Text_t86179C97C713E1A6B3751B48DC7A16C874A7B262 * ___errorText_7;
 	// TMPro.TMP_Text NetworkManager::roomNameText
@@ -8564,17 +8565,15 @@ public:
 	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___playerListPrefab_12;
 	// UnityEngine.GameObject NetworkManager::startGameButton
 	GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * ___startGameButton_13;
-	// TMPro.TMP_InputField NetworkManager::playerName
-	TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * ___playerName_14;
 
 public:
-	inline static int32_t get_offset_of_roomName_6() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___roomName_6)); }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * get_roomName_6() const { return ___roomName_6; }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 ** get_address_of_roomName_6() { return &___roomName_6; }
-	inline void set_roomName_6(TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * value)
+	inline static int32_t get_offset_of_roomNameInput_6() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___roomNameInput_6)); }
+	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * get_roomNameInput_6() const { return ___roomNameInput_6; }
+	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 ** get_address_of_roomNameInput_6() { return &___roomNameInput_6; }
+	inline void set_roomNameInput_6(TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * value)
 	{
-		___roomName_6 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___roomName_6), (void*)value);
+		___roomNameInput_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___roomNameInput_6), (void*)value);
 	}
 
 	inline static int32_t get_offset_of_errorText_7() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___errorText_7)); }
@@ -8638,15 +8637,6 @@ public:
 	{
 		___startGameButton_13 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___startGameButton_13), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_playerName_14() { return static_cast<int32_t>(offsetof(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606, ___playerName_14)); }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * get_playerName_14() const { return ___playerName_14; }
-	inline TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 ** get_address_of_playerName_14() { return &___playerName_14; }
-	inline void set_playerName_14(TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * value)
-	{
-		___playerName_14 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___playerName_14), (void*)value);
 	}
 };
 
@@ -13249,6 +13239,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * GameObject_AddComponent_TisRu
 // System.Void System.Action`2<System.ByteEnum,System.Object>::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2__ctor_m1A9E5430BE33327DC3F065C88811364A65B9439C_gshared (Action_2_tC5D0E839DFB75ADC59E109ED432CED0626FC924C * __this, RuntimeObject * ___object0, intptr_t ___method1, const RuntimeMethod* method);
 
+// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method);
+// System.String System.Int32::ToString(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m5398ED0B6625B75CAF70C63B3CF2CE47D3C1B184 (int32_t* __this, String_t* ___format0, const RuntimeMethod* method);
+// System.String System.String::Concat(System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method);
+// System.Void TMPro.TMP_InputField::set_text(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_text_m52BC8546DFA3BD649C2EBD1C9548C8DBFC4A87BB (TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * __this, String_t* ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_mC26E5AD0D8D156C7FFD173AA15827F69225E9DB8 (RuntimeObject * ___message0, const RuntimeMethod* method);
 // System.Boolean Photon.Pun.PhotonNetwork::ConnectUsingSettings()
@@ -13265,8 +13263,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_m14531DC868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_m9AFBB5335B441B94E884B8A9D4A27AD60E3D7F7C (String_t* ___value0, const RuntimeMethod* method);
 // System.Boolean Photon.Pun.PhotonNetwork::CreateRoom(System.String,Photon.Realtime.RoomOptions,Photon.Realtime.TypedLobby,System.String[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_CreateRoom_m364ACA83E6A534AC91C938B16FCF3A5DB1A0ED3D (String_t* ___roomName0, RoomOptions_t9923C5A201832F8328FFCA30828018311BA60A2F * ___roomOptions1, TypedLobby_tD368895EDDB4706F8B68ABCA542E3E697845B1C5 * ___typedLobby2, StringU5BU5D_tACEBFEDE350025B554CD507C9AE8FFE49359549A* ___expectedUsers3, const RuntimeMethod* method);
-// System.String System.String::Concat(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B (String_t* ___str00, String_t* ___str11, const RuntimeMethod* method);
 // System.String Photon.Realtime.RoomInfo::get_Name()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* RoomInfo_get_Name_m38D5F419210D0AFB91896D69292740374B6EFDA4 (RoomInfo_t7069F437E8D00842881716F7573A4ED7EA119889 * __this, const RuntimeMethod* method);
 // System.Boolean Photon.Pun.PhotonNetwork::JoinRoom(System.String,System.String[])
@@ -13355,8 +13351,6 @@ inline int32_t List_1_get_Count_m199DB87BCE947106FBA38E19FDFE80CB65B61144_inline
 {
 	return ((  int32_t (*) (List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3 *, const RuntimeMethod*))List_1_get_Count_m5D847939ABB9A78203B062CAFFE975792174D00F_gshared_inline)(__this, method);
 }
-// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.String>::get_Item(System.Int32)
 inline String_t* List_1_get_Item_m8578F26F0FE72EDB6A0290D78944B3D4F34DBFAC_inline (List_1_t6C9F81EDBF0F4A31A9B0DA372D2EF34BDA3A1AF3 * __this, int32_t ___index0, const RuntimeMethod* method)
 {
@@ -13391,10 +13385,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mC0995D847F6A95B1A55
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerPrefs_HasKey_m48BE5886380B51AB495B91C9A26115B7CB958A92 (String_t* ___key0, const RuntimeMethod* method);
 // System.String UnityEngine.PlayerPrefs::GetString(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerPrefs_GetString_mE7654C1031622A56CD8F248F53714B105A35A159 (String_t* ___key0, const RuntimeMethod* method);
-// System.Void TMPro.TMP_InputField::set_text(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_text_m52BC8546DFA3BD649C2EBD1C9548C8DBFC4A87BB (TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * __this, String_t* ___value0, const RuntimeMethod* method);
-// System.String System.Int32::ToString(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m5398ED0B6625B75CAF70C63B3CF2CE47D3C1B184 (int32_t* __this, String_t* ___format0, const RuntimeMethod* method);
 // System.Void PlayerNameManager::onNameInputValueChanged()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerNameManager_onNameInputValueChanged_mC8C4E7748091BB9A16DFF373370BE1662BF669FF (PlayerNameManager_t2C70D54E6794E673239CA853297A5A809F9A3B5F * __this, const RuntimeMethod* method);
 // System.Void Photon.Pun.PhotonNetwork::set_NickName(System.String)
@@ -13579,11 +13569,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkManager_Awake_m264F69270EE58EA94B
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral51A1C48183DC1FF2764D136B88FA5A34AA6B1410);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8BF951CF903ECC622812D47B1157D1A3AFA9FBDC);
 		s_Il2CppMethodInitialized = true;
 	}
+	int32_t V_0 = 0;
 	{
 		// Instance = this;
 		((NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606_StaticFields*)il2cpp_codegen_static_fields_for(NetworkManager_tDA8A4BECD3B0245AF4351E9ABC199B1B185BF606_il2cpp_TypeInfo_var))->set_Instance_5(__this);
+		// roomNameInput.text = "Room " + Random.Range(0, 1000).ToString("0000");
+		TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * L_0 = __this->get_roomNameInput_6();
+		int32_t L_1;
+		L_1 = Random_Range_m4B3A0037ACA057F33C94508F908546B9317D996A(0, ((int32_t)1000), /*hidden argument*/NULL);
+		V_0 = L_1;
+		String_t* L_2;
+		L_2 = Int32_ToString_m5398ED0B6625B75CAF70C63B3CF2CE47D3C1B184((int32_t*)(&V_0), _stringLiteral8BF951CF903ECC622812D47B1157D1A3AFA9FBDC, /*hidden argument*/NULL);
+		String_t* L_3;
+		L_3 = String_Concat_m4B4AB72618348C5DFBFBA8DED84B9E2EBDB55E1B(_stringLiteral51A1C48183DC1FF2764D136B88FA5A34AA6B1410, L_2, /*hidden argument*/NULL);
+		TMP_InputField_set_text_m52BC8546DFA3BD649C2EBD1C9548C8DBFC4A87BB(L_0, L_3, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -13672,8 +13675,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkManager_CreateRoom_mD113C24BF9622
 	}
 	bool V_0 = false;
 	{
-		// if (string.IsNullOrEmpty(roomName.text))
-		TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * L_0 = __this->get_roomName_6();
+		// if (string.IsNullOrEmpty(roomNameInput.text))
+		TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * L_0 = __this->get_roomNameInput_6();
 		String_t* L_1;
 		L_1 = TMP_InputField_get_text_m14531DC868984D1436064D2FCF6ADFED61BEE81D(L_0, /*hidden argument*/NULL);
 		bool L_2;
@@ -13692,8 +13695,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkManager_CreateRoom_mD113C24BF9622
 
 IL_0017:
 	{
-		// PhotonNetwork.CreateRoom(roomName.text);
-		TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * L_4 = __this->get_roomName_6();
+		// PhotonNetwork.CreateRoom(roomNameInput.text);
+		TMP_InputField_tD50B4F3E6822EAC2720FAED56B86E98183F61D59 * L_4 = __this->get_roomNameInput_6();
 		String_t* L_5;
 		L_5 = TMP_InputField_get_text_m14531DC868984D1436064D2FCF6ADFED61BEE81D(L_4, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(PhotonNetwork_tA2C1B90471C5934B55DF1921941466208D3054EC_il2cpp_TypeInfo_var);

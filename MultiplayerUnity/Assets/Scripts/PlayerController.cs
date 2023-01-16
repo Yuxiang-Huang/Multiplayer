@@ -39,23 +39,30 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     void createList()
     {
+        //not do things
+        allPhrases.Add("Not speak for 10 seconds");
+        allPhrases.Add("Not move for 10 seconds");
+
         //look
         allPhrases.Add("Look Up");
         allPhrases.Add("Look Down");
         allPhrases.Add("Look Back");
 
         //do
-        allPhrases.Add("Hesitate");
-        allPhrases.Add("Compare");
-        allPhrases.Add("Ask");
         allPhrases.Add("Laugh");
         allPhrases.Add("Stand");
-
         allPhrases.Add("Help");
-        allPhrases.Add("Point using finger");
+        allPhrases.Add("Hesitate");
         allPhrases.Add("Recall");
+        allPhrases.Add("Touch head");
+        allPhrases.Add("Touch hands");
+        allPhrases.Add("Hold anything");
+        allPhrases.Add("Point using finger");
 
         //say
+        allPhrases.Add("Ask");
+        allPhrases.Add("Shout");
+
         allPhrases.Add("Agree");
         allPhrases.Add("Disagree");
 
@@ -63,21 +70,44 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         allPhrases.Add("Repeat");
 
+        allPhrases.Add("Compare");
+
         allPhrases.Add("Guess the phrase");
         allPhrases.Add("Praise");
-        allPhrases.Add("Touch head");
 
         //speak
         allPhrases.Add("Talk about time");
+        allPhrases.Add("Talk about food");
+        allPhrases.Add("Talk about school");
+        allPhrases.Add("Talk about weather");
+        allPhrases.Add("Talk about soccer");
+        allPhrases.Add("Talk about countries");
+        allPhrases.Add("Talk about location");
+        allPhrases.Add("Talk about sport");
+        allPhrases.Add("Talk about money");
+        allPhrases.Add("Talk about science");
+        allPhrases.Add("Talk about history");
+        allPhrases.Add("Talk about mathematics");
+        allPhrases.Add("Talk about music or art");
 
+        allPhrases.Add("Say any word not in English");
+        allPhrases.Add("Say any number");
         allPhrases.Add("Say any name");
         allPhrases.Add("Say any food");
-        allPhrases.Add("Say any subject");
         allPhrases.Add("Say any animal");
+        allPhrases.Add("Say any emotion");
+        allPhrases.Add("Say any characteristic");
+        allPhrases.Add("Say any occupation");
 
-        allPhrases.Add("Say 'If'");
-        allPhrases.Add("Say 'No'");
         allPhrases.Add("Say 'Unbelievable'");
+        allPhrases.Add("Say 'If'");
+        allPhrases.Add("Say 'No' or 'don’t'");
+        allPhrases.Add("Say 'Sorry'");
+        allPhrases.Add("Say ‘Why’ or ‘How’");
+        allPhrases.Add("Say ‘Where’ or ‘When’");
+        allPhrases.Add("Say ‘Who’ or ‘What’ or ‘Which’");
+
+        allPhrases.Add("Use more than one pronoun in one sentence");
     }
 
     public void reveal()
