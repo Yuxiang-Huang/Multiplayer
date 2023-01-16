@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     List<string> allPhrases = new List<string>();
 
+    int revealTextcountDown = 0;
+
     //need to sync
     public int cardNum;
     public string phrase;
@@ -119,7 +121,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
         displayPhrase.gameObject.SetActive(true);
         revealBtn.gameObject.SetActive(false);
 
-        PV.RPC("displayRevealMessage", RpcTarget.AllBuffered, PhotonNetwork.NickName + " revealed the card.");
+        PV.RPC("displayRevealMessage", RpcTarget.AllBuffered, PhotonNetwork.NickName + " revealed the card. "
+            + cardNum + " cards.");
     }
 
     public void win()
@@ -181,10 +184,20 @@ public class PlayerController : MonoBehaviourPunCallbacks
     IEnumerator CountDownReveal()
     {
         RevealText.Instance.gameObject.SetActive(true);
+        revealTextcountDown++;
 
         yield return new WaitForSeconds(3);
 
-        RevealText.Instance.gameObject.SetActive(false);
+        revealTextcountDown--;
+
+        if (revealTextcountDown == 0)
+        {
+            RevealText.Instance.gameObject.SetActive(false);
+        }
+        else
+        {
+            RevealText.Instance.gameObject.SetActive(true);
+        }
     }
 }
 
