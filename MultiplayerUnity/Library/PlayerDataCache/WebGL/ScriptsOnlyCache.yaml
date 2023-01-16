@@ -6,10 +6,13 @@ ScriptsOnlyBuild:
     - PlayerListItem
     - PlayerManager
     - PlayerNameManager
+    - RevealText
     - RoomListItem
     - RoomManager
     - Screen
     - ScreenManager
+    ParrelSync.dll:
+    - ParrelSync.ClonesManagerWindow
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
@@ -64,18 +67,28 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1704}
     - Class: 114
+      Script: {instanceID: 1778}
+    - Class: 114
       Script: {instanceID: 2394}
     - Class: 114
       Script: {instanceID: 2516}
     - Class: 114
+      Script: {instanceID: 2564}
+    - Class: 114
       Script: {instanceID: 2700}
     - Class: 114
       Script: {instanceID: 2902}
+    - Class: 114
+      Script: {instanceID: 17528}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
@@ -875,6 +888,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PhotonTeamsManager
+  - hash:
+      serializedVersion: 2
+      Hash: ee98729079998eb63435f99f41b30b9e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RevealText
   platform: 20
   scenePathNames:
   - Assets/Scenes/Lobby.unity
