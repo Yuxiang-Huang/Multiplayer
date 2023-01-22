@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
         allPhrases.Add("Any two body parts touching");
         allPhrases.Add("Hold anything");
         allPhrases.Add("Make any gesture");
+        allPhrases.Add("Apologize");
 
         //say
         allPhrases.Add("Ask");
@@ -101,7 +102,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
         allPhrases.Add("Say 'Unbelievable'");
         allPhrases.Add("Say 'If'");
         allPhrases.Add("Say 'No' or 'don’t'");
-        allPhrases.Add("Say 'Sorry'");
         allPhrases.Add("Say ‘Why’ or ‘How’");
         allPhrases.Add("Say ‘Where’ or ‘When’");
         allPhrases.Add("Say ‘Who’ or ‘What’ or ‘Which’");
