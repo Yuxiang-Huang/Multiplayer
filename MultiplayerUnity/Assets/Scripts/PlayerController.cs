@@ -55,9 +55,9 @@ public class PlayerController : MonoBehaviourPunCallbacks
         allPhrases.Add("Help");
         allPhrases.Add("Hesitate");
         allPhrases.Add("Recall");
-        allPhrases.Add("Touch head");
-        allPhrases.Add("Touch hands");
+        allPhrases.Add("Any two body parts touching");
         allPhrases.Add("Hold anything");
+        allPhrases.Add("Make any gesture");
 
         //say
         allPhrases.Add("Ask");
