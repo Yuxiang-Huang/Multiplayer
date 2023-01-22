@@ -52,14 +52,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
         //do
         allPhrases.Add("Laugh");
-        allPhrases.Add("Stand");
         allPhrases.Add("Help");
         allPhrases.Add("Hesitate");
         allPhrases.Add("Recall");
         allPhrases.Add("Touch head");
         allPhrases.Add("Touch hands");
         allPhrases.Add("Hold anything");
-        allPhrases.Add("Point using finger");
 
         //say
         allPhrases.Add("Ask");
@@ -82,7 +80,6 @@ public class PlayerController : MonoBehaviourPunCallbacks
         allPhrases.Add("Talk about food");
         allPhrases.Add("Talk about school");
         allPhrases.Add("Talk about weather");
-        allPhrases.Add("Talk about soccer");
         allPhrases.Add("Talk about countries");
         allPhrases.Add("Talk about location");
         allPhrases.Add("Talk about sport");
