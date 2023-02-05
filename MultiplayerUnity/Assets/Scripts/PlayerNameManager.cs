@@ -5,8 +5,7 @@ using TMPro;
 using Photon.Pun;
 
 public class PlayerNameManager : MonoBehaviour
-{
-    [SerializeField] TMP_InputField nameInput;
+{    [SerializeField] TMP_InputField nameInput;
 
     void Start()
     {
@@ -16,7 +15,11 @@ public class PlayerNameManager : MonoBehaviour
         }
         else
         {
-            nameInput.text = "Player " + Random.Range(0, 1000).ToString("0000");
+            char[] vowel = new char[] {'a', 'e', 'i', 'o', 'u'};
+
+            nameInput.text = "" + consonant(vowel) + vowel[Random.Range(0, vowel.Length)] + consonant(vowel);
+
+
             onNameInputValueChanged();
         }
     }
@@ -25,5 +28,16 @@ public class PlayerNameManager : MonoBehaviour
     {
         PhotonNetwork.NickName = nameInput.text;
         PlayerPrefs.SetString("username", nameInput.text);
+    }
+
+    public static char consonant(char[] vowel)
+    {
+        char ans;
+        do
+        {
+            ans = (char)('a' + Random.Range(0, 26));
+        } while (System.Array.IndexOf(vowel, ans) > -1);
+
+        return ans;
     }
 }

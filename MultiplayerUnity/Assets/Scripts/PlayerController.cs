@@ -44,11 +44,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
         //not do things
         allPhrases.Add("Not speak for 10 seconds");
         allPhrases.Add("Not move for 10 seconds");
+        allPhrases.Add("Talk for 5 seconds");
 
         //look
         allPhrases.Add("Look Up");
         allPhrases.Add("Look Down");
-        allPhrases.Add("Look Back");
 
         //do
         allPhrases.Add("Laugh");
@@ -98,8 +98,8 @@ public class PlayerController : MonoBehaviourPunCallbacks
         allPhrases.Add("Say any emotion");
         allPhrases.Add("Say any characteristic");
         allPhrases.Add("Say any occupation");
+        allPhrases.Add("Say any letter");
 
-        allPhrases.Add("Say 'Unbelievable'");
         allPhrases.Add("Say 'If'");
         allPhrases.Add("Say 'No' or 'don’t'");
         allPhrases.Add("Say ‘Why’ or ‘How’");
